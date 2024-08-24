@@ -5,11 +5,11 @@ const page = {
   movies: () => cy.byDataCy('Movie'),
 
   assertMovieSelected: index => {
-    page.movies().eq(index).should('have.class', 'has-background-dark');
+    page.movies().eq(index).should('have.class', 'has-background-grey');
   },
 
   assertSelectedMoviesCount: count => {
-    cy.get('[data-cy="Movie"].has-background-dark').should(
+    cy.get('[data-cy="Movie"].has-background-grey').should(
       'have.length',
       count,
     );

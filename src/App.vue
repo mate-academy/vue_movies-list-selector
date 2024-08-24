@@ -7,7 +7,7 @@
   <div class="page">
     <div class="page-content">
       <div class="movies">
-        <div class="card has-background-dark" data-cy="Movie">
+        <div class="card has-background-grey" data-cy="Movie">
           <header class="card-header">
             <button class="card-header-icon" data-cy="MovieUnselect">
               <span class="icon">

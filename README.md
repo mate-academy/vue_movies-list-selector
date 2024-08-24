@@ -9,7 +9,7 @@ You are given `src/data/movies.json` and initial markup in the `src/App.vue`. Yo
 1. Each movie should have an `MovieSelect` button to select the movie.
 1. Only 1 movie can be selected at a time;
 1. Save a `selectedMovie` in the state.
-1. Add the `has-background-dark` class to the `card` of the selected Movie.
+1. Add the `has-background-grey` class to the `card` of the selected Movie.
 1. Show the name of the selected movie in the `PageTitle`.
 1. Show the `ClearButton` button before the `PageTitle` only when a movie is selected.
 1. `ClearButton` should clear the selection when clicked.
