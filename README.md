@@ -1,4 +1,4 @@
-# Movies List
+# Movie List Selector
 
 > Here is the [working version](https://mate-academy.github.io/vue_movies-list-selector/)
 
