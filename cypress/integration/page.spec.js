@@ -1,15 +1,15 @@
-/* eslint-disable arrow-parens, curly */
+/* eslint-disable arrow-parens, curly, max-len */
 const page = {
-  title: () => cy.byDataCy('PageTitle'),
-  clearButton: () => cy.byDataCy('ClearButton'),
-  movies: () => cy.byDataCy('Movie'),
+  title: () => cy.byDataCy('page-title'),
+  clearButton: () => cy.byDataCy('clear-button'),
+  movies: () => cy.byDataCy('movie'),
 
   assertMovieSelected: index => {
     page.movies().eq(index).should('have.class', 'has-background-grey');
   },
 
   assertSelectedMoviesCount: count => {
-    cy.get('[data-cy="Movie"].has-background-grey').should(
+    cy.get('[data-cy="movie"].has-background-grey').should(
       'have.length',
       count,
     );
@@ -39,9 +39,12 @@ describe('Page', () => {
       page.assertSelectedMoviesCount(0);
     });
 
-    it('should have correct styles for MovieSelect', () => {
-      cy.get('[data-cy="MovieSelect"] .fa-minus').should('not.exist');
-      cy.get('[data-cy="MovieSelect"] .fa-plus').should('have.length', 5);
+    it('should have correct styles for movie__select-button', () => {
+      cy.get('[data-cy="movie__select-button"] .fa-minus').should('not.exist');
+      cy.get('[data-cy="movie__select-button"] .fa-plus').should(
+        'have.length',
+        5,
+      );
     });
 
     it('should have title with no selected movie', () => {
@@ -55,7 +58,7 @@ describe('Page', () => {
 
   describe('after selecting a movie', () => {
     beforeEach(() => {
-      page.movies().eq(2).byDataCy('MovieSelect').click();
+      page.movies().eq(2).byDataCy('movie__select-button').click();
     });
 
     it('should have only 1 highlighted movie', () => {
@@ -66,29 +69,32 @@ describe('Page', () => {
       page.assertMovieSelected(2);
     });
 
-    it('should show MovieUnselect for a selected movie', () => {
-      page.movies().eq(2).byDataCy('MovieUnselect').should('exist');
+    it('should show movie__unselect-button for a selected movie', () => {
+      page.movies().eq(2).byDataCy('movie__unselect-button').should('exist');
     });
 
-    it('should have only 1 MovieUnselect', () => {
-      cy.byDataCy('MovieUnselect').should('have.length', 1);
+    it('should have only 1 movie__unselect-button', () => {
+      cy.byDataCy('movie__unselect-button').should('have.length', 1);
     });
 
-    it('should have correct style for the MovieUnselect', () => {
-      cy.get('[data-cy="MovieUnselect"] .fa-minus').should('exist');
+    it('should have correct style for the movie__unselect-button', () => {
+      cy.get('[data-cy="movie__unselect-button"] .fa-minus').should('exist');
     });
 
-    it('should not have MovieSelect for the selected movie', () => {
-      page.movies().eq(2).byDataCy('MovieSelect').should('not.exist');
+    it('should not have movie__select-button for the selected movie', () => {
+      page.movies().eq(2).byDataCy('movie__select-button').should('not.exist');
     });
 
-    it('should have an MovieSelect for each not selected movies', () => {
-      cy.byDataCy('MovieSelect').should('have.length', 4);
+    it('should have an movie__select-button for each not selected movies', () => {
+      cy.byDataCy('movie__select-button').should('have.length', 4);
     });
 
-    it('should have correct styles for MovieSelect', () => {
-      cy.get('[data-cy="MovieSelect"] .fa-minus').should('not.exist');
-      cy.get('[data-cy="MovieSelect"] .fa-plus').should('have.length', 4);
+    it('should have correct styles for movie__select-button', () => {
+      cy.get('[data-cy="movie__select-button"] .fa-minus').should('not.exist');
+      cy.get('[data-cy="movie__select-button"] .fa-plus').should(
+        'have.length',
+        4,
+      );
     });
 
     it('should have title with a selected movie', () => {
@@ -102,8 +108,8 @@ describe('Page', () => {
 
   describe('after selecting another movie', () => {
     beforeEach(() => {
-      page.movies().eq(2).byDataCy('MovieSelect').click();
-      page.movies().eq(1).byDataCy('MovieSelect').click();
+      page.movies().eq(2).byDataCy('movie__select-button').click();
+      page.movies().eq(1).byDataCy('movie__select-button').click();
     });
 
     it('should have only 1 highlighted movie', () => {
@@ -114,29 +120,32 @@ describe('Page', () => {
       page.assertMovieSelected(1);
     });
 
-    it('should show MovieUnselect for a selected movie', () => {
-      page.movies().eq(1).byDataCy('MovieUnselect').should('exist');
+    it('should show movie__unselect-button for a selected movie', () => {
+      page.movies().eq(1).byDataCy('movie__unselect-button').should('exist');
     });
 
-    it('should have only 1 MovieUnselect', () => {
-      cy.byDataCy('MovieUnselect').should('have.length', 1);
+    it('should have only 1 movie__unselect-button', () => {
+      cy.byDataCy('movie__unselect-button').should('have.length', 1);
     });
 
-    it('should have correct style for the MovieUnselect', () => {
-      cy.get('[data-cy="MovieUnselect"] .fa-minus').should('exist');
+    it('should have correct style for the movie__unselect-button', () => {
+      cy.get('[data-cy="movie__unselect-button"] .fa-minus').should('exist');
     });
 
-    it('should not have MovieSelect for the selected movie', () => {
-      page.movies().eq(1).byDataCy('MovieSelect').should('not.exist');
+    it('should not have movie__select-button for the selected movie', () => {
+      page.movies().eq(1).byDataCy('movie__select-button').should('not.exist');
     });
 
-    it('should have an MovieSelect for each not selected movies', () => {
-      cy.byDataCy('MovieSelect').should('have.length', 4);
+    it('should have an movie__select-button for each not selected movies', () => {
+      cy.byDataCy('movie__select-button').should('have.length', 4);
     });
 
-    it('should have correct styles for MovieSelect', () => {
-      cy.get('[data-cy="MovieSelect"] .fa-minus').should('not.exist');
-      cy.get('[data-cy="MovieSelect"] .fa-plus').should('have.length', 4);
+    it('should have correct styles for movie__select-button', () => {
+      cy.get('[data-cy="movie__select-button"] .fa-minus').should('not.exist');
+      cy.get('[data-cy="movie__select-button"] .fa-plus').should(
+        'have.length',
+        4,
+      );
     });
 
     it('should have title with a selected movie', () => {
@@ -146,7 +155,7 @@ describe('Page', () => {
 
   describe('after "x" button click', () => {
     beforeEach(() => {
-      page.movies().eq(2).byDataCy('MovieSelect').click();
+      page.movies().eq(2).byDataCy('movie__select-button').click();
       page.clearButton().click();
     });
 
@@ -163,17 +172,17 @@ describe('Page', () => {
     });
 
     it('should allow to select a movie', () => {
-      page.movies().eq(3).byDataCy('MovieSelect').click();
+      page.movies().eq(3).byDataCy('movie__select-button').click();
 
       page.title().should('have.text', 'Rogue One');
       page.assertMovieSelected(3);
     });
   });
 
-  describe('after MovieUnselect click', () => {
+  describe('after movie__unselect-button click', () => {
     beforeEach(() => {
-      page.movies().eq(2).byDataCy('MovieSelect').click();
-      cy.byDataCy('MovieUnselect').click();
+      page.movies().eq(2).byDataCy('movie__select-button').click();
+      cy.byDataCy('movie__unselect-button').click();
     });
 
     it('should have title with no selected movie', () => {
@@ -189,7 +198,7 @@ describe('Page', () => {
     });
 
     it('should allow to select a movie', () => {
-      page.movies().eq(3).byDataCy('MovieSelect').click();
+      page.movies().eq(3).byDataCy('movie__select-button').click();
 
       page.title().should('have.text', 'Rogue One');
       page.assertMovieSelected(3);
