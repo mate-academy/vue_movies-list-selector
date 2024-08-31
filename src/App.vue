@@ -7,9 +7,9 @@
   <div class="page">
     <div class="page-content">
       <div class="movies">
-        <div class="card has-background-grey" data-cy="Movie">
+        <div class="card has-background-grey" data-cy="movie">
           <header class="card-header">
-            <button class="card-header-icon" data-cy="MovieUnselect">
+            <button class="card-header-icon" data-cy="movie__unselect-button">
               <span class="icon">
                 <i class="fas fa-minus"></i>
               </span>
@@ -19,7 +19,7 @@
           <div class="card-image">
             <figure class="image is-4by3">
               <img
-                data-cy="MovieImage"
+                data-cy="movie__image"
                 src="https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg"
                 alt="Inception"
               />
@@ -35,12 +35,12 @@
               </div>
 
               <div class="media-content">
-                <p class="title is-8" data-cy="MovieTitle">Inception</p>
+                <p class="title is-8" data-cy="movie__title">Inception</p>
               </div>
             </div>
 
             <div class="content">
-              <p data-cy="MovieDescription">
+              <p data-cy="movie__description">
                 Follows the lives of eight very different couples in dealing
                 with their love lives in various loosely interrelated tales all
                 set during a frantic month before Christmas in London, England.
@@ -48,7 +48,7 @@
 
               <a
                 href="https://www.imdb.com/title/tt1375666"
-                data-cy="MovieLink"
+                data-cy="movie__link"
               >
                 IMDB
               </a>
@@ -56,9 +56,9 @@
           </div>
         </div>
 
-        <div class="card" data-cy="Movie">
+        <div class="card" data-cy="movie">
           <header class="card-header">
-            <button class="card-header-icon" data-cy="MovieSelect">
+            <button class="card-header-icon" data-cy="movie__select-button">
               <span class="icon">
                 <i class="fas fa-plus"></i>
               </span>
@@ -68,7 +68,7 @@
           <div class="card-image">
             <figure class="image is-4by3">
               <img
-                data-cy="MovieImage"
+                data-cy="movie__image"
                 src="https://m.media-amazon.com/images/M/MV5BMTY4NjQ5NDc0Nl5BMl5BanBnXkFtZTYwNjk5NDM3._V1_.jpg"
                 alt="Love Actually"
               />
@@ -84,12 +84,12 @@
               </div>
 
               <div class="media-content">
-                <p class="title is-8" data-cy="MovieTitle">Love Actually</p>
+                <p class="title is-8" data-cy="movie__title">Love Actually</p>
               </div>
             </div>
 
             <div class="content">
-              <p data-cy="MovieDescription">
+              <p data-cy="movie__description">
                 A thief who steals corporate secrets through the use of
                 dream-sharing technology is given the inverse task of planting
                 an idea into the mind of a C.E.O.
@@ -97,7 +97,7 @@
 
               <a
                 href="https://www.imdb.com/title/tt0314331"
-                data-cy="MovieLink"
+                data-cy="movie__link"
               >
                 IMDB
               </a>
@@ -105,9 +105,9 @@
           </div>
         </div>
 
-        <div class="card" data-cy="Movie">
+        <div class="card" data-cy="movie">
           <header class="card-header">
-            <button class="card-header-icon" data-cy="MovieSelect">
+            <button class="card-header-icon" data-cy="movie__select-button">
               <span class="icon">
                 <i class="fas fa-plus"></i>
               </span>
@@ -117,7 +117,7 @@
           <div class="card-image">
             <figure class="image is-4by3">
               <img
-                data-cy="MovieImage"
+                data-cy="movie__image"
                 src="https://m.media-amazon.com/images/M/MV5BMTY4YWMzMTMtZjUyOS00OGY1LTljMGUtOWU5ZjYzMjc2ZTMwXkEyXkFqcGdeQXVyMTYzMDM0NTU@._V1_SY1000_CR0,0,701,1000_AL_.jpg"
                 alt="The Day After Tomorrow"
               />
@@ -133,14 +133,14 @@
               </div>
 
               <div class="media-content">
-                <p class="title is-8" data-cy="MovieTitle">
+                <p class="title is-8" data-cy="movie__title">
                   The Day After Tomorrow
                 </p>
               </div>
             </div>
 
             <div class="content">
-              <p data-cy="MovieDescription">
+              <p data-cy="movie__description">
                 Jack Hall, paleoclimatologist, must make a daring trek from
                 Washington, D.C. to New York City to reach his son, trapped in
                 the cross-hairs of a sudden international storm which plunges
@@ -149,7 +149,7 @@
 
               <a
                 href="https://www.imdb.com/title/tt0319262"
-                data-cy="MovieLink"
+                data-cy="movie__link"
               >
                 IMDB
               </a>
